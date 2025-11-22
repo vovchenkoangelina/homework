@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  min-height: 100vh;
+  color: #333333;
+}
+
+.form {
+  border: 1px solid #333;
+  border-radius: 6px;
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+}
+
+.form-group {
+  border: none;
+  padding: 0;
+}
+
+.form-group-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.checkbox-label {
+  padding-left: 22px;
+}
+
+.textarea {
+  max-height: 150px;
+  min-height: 30px;
+  resize: vertical;
+}
+
+.input,
+.textarea {
+  border: 1px solid #333;
+  border-radius: 6px;
+  width: 100%;
+  padding: 5px 12px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  max-width: 115px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  background-color: #448b1b;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox {
+  position: absolute;
+  appearance: none;
+  outline: none;
+}
+
+.checkbox-text {
+  font-size: 14px;
+}
+
+/* Кастомный чекбокс */
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -22px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox:checked::after {
+  background: url("../images/check-icon.svg") no-repeat center, #448b1b;
+}
+
+/* Состояния для элементов: при наведении, при фокусе, "нажатые", отключенные */
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button:not(:disabled):active {
+  background-color: #448b1b;
+}
+
+.input:disabled,
+.textarea:disabled {
+  opacity: 0.5;
+}
+
+.button:disabled,
+.checkbox:disabled::after {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input:focus-visible,
+.textarea:focus-visible,
+.checkbox:focus-visible::after,
+.button:focus-visible {
+  outline: 2px solid #448b1b;
+  outline-offset: 1px;
+}
+
+
