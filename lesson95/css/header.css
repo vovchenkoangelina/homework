@@ -1,0 +1,25 @@
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d3cbd9;
+}
+
+.header .text-sub p {
+    margin-bottom: 8px;
+}
+
+.header .text-sub a {
+    font-weight: 500;
+    font-size: 18px;
+    color: #2c332f;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.phone a:hover {
+    color: #3596ed;
+} 
