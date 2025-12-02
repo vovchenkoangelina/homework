@@ -44,11 +44,18 @@ color: var(--main-color);
   font-weight: 400;
 }
 
-.title-medium {
+.title-medium, .title-small {
   font-weight: 600;
-  font-size: clamp(32px, 0.936rem + 4.54vw, 60px);
   text-transform: uppercase;
   color: var(--main-color);
+}
+
+.title-medium {
+  font-size: clamp(32px, 0.936rem + 4.54vw, 60px);
+}
+
+.title-small {
+  font-size: clamp(24px, 1.023rem + 2.04vw, 32px);
 }
 
 @media (width > 576px) {
