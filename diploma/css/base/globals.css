@@ -1,0 +1,28 @@
+
+.page {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.page__body {
+  min-width: 375px;
+}
+
+.container {
+  width: min(var(--container-width), 100% - var(--container-padding) * 2);
+  margin-inline: auto;
+}
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus {
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+}
+
