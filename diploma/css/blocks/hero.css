@@ -1,0 +1,122 @@
+.first-screen-wrapper {
+        min-height: 100vh;
+        background-image: url(../../images/hero-background.jpg); 
+        background-size: cover;
+        background-position: center right;
+        background-repeat: no-repeat;
+    }
+
+.hero { 
+    padding-bottom: 178px;
+}
+
+.hero__container{
+    position: relative;
+}
+
+
+
+.hero__header {
+    max-width: 650px;
+    margin-top: 155px;
+}
+
+.hero__subtitle {
+}
+.hero__title {
+    padding-bottom: 18px;
+    font-weight: 600;
+    font-size: 108px;
+    background: linear-gradient(180deg, #fff 31.75%, #1a3031 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero__header-text {
+    max-width: 560px;
+}
+
+.hero__content {
+    margin-top: 77px;
+    margin-bottom: 101px;
+    display: flex;
+    max-width: 576px;
+}
+
+.hero__content-icon {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 71px;
+    height: 71px;
+    border-radius: 12px;
+    background: var(--reasons-card-background-color);
+}
+
+.hero__content-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2.5px;
+    border-radius: inherit;
+
+    background: var(--border-color);
+
+    -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+.hero__content-icon-img{
+    
+}
+
+.hero-content-text-wrapper {
+    padding-inline: 30px;
+}
+
+.hero__content-title {
+    margin-bottom: 16px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.hero__content-text {
+color: var(--shadow-color);
+}
+
+.hero__footer {
+}
+
+.sign-up-button {
+    color: var(--main-color);
+    font-weight: 750;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-align: center;
+    width: 479px;
+    height: 60px;
+    box-shadow: 0 7px 20px -7px var(--shadow-color);
+    background: var(--button-background-color);
+    border-radius: 9px;
+}
+
+.hero__footer-button {
+    margin-right: 50px;
+}
+
+.hero__footer-slider {
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    display: inline-block; 
+    transform: rotate(90deg);
+}

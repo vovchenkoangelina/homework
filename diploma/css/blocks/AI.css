@@ -1,0 +1,55 @@
+.AI {
+        min-height: 100vh;
+        background-image: url(../../images/AI-background.jpg); 
+        background-size: cover;
+        background-position: center right;
+        background-repeat: no-repeat;
+    }
+
+.AI__title {
+    padding-bottom: 64px;
+    max-width: 700px;
+}
+
+.AI__list {
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 700px;
+}
+
+.AI__list-item {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start; 
+    position: relative;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 140%;
+    background: var(--stripes-background-color);
+}
+
+.AI__list-item::after {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 32px;
+    background: url(../../decor/glow-ellipse.png) no-repeat center;
+    z-index: 0;
+    left: 50px;
+    top: 17px;
+}
+
+.AI__list-icon {
+    margin-top: -7px;   
+}
+
+.AI__list-icon,
+.AI__list-text {
+    z-index: 1;
+}
+
+
+
+

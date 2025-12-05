@@ -9,16 +9,46 @@
   --main-color: #fff;
   --secondary-color: #747d81;
   --accent-color: #4abcec;
+  
+  --shadow-color: #00e0ff;
+  --box-shadow: 0 0 24px 0 #00e0ff, 0 4px 15px 0 #4ad9ec, 0 3px 15px 0 #00e0ffed;
+
   --title-color: linear-gradient(180deg, #fff 31.75%, #1a3031 100%);
+
   --section-background-color-light: linear-gradient(313deg, #022335 0%, #043a41 100%);
-  --section-background-color-dark: linear-gradient(313deg, #022335cc 0%, #0c373dcc 100%);
+  --section-background-color-dark: linear-gradient(30deg, #01141f 0%, #092a2e 100%);
+
   --button-background-color: linear-gradient(180deg, rgba(3, 225, 255, 0.66) 0%, #13cdc2 100%);
-  --reasons-card-background-color: linear-gradient(180deg, #00e0ff1c 0%, #00e0ff1c 100%);
+  
+  --reasons-card-background-color: linear-gradient(180deg, rgba(0, 224, 255, 0.11) 0%, rgba(0, 224, 255, 0.11) 100%);
+  /* --reasons-card-background-color: linear-gradient(180deg, #034651 0%, #033e49 100%); */
+
   --stripes-background-color: linear-gradient(90deg, #1f3f4d8a 0%, #1f4b5e00 100%);
-  --border-color: linear-gradient(180eg, #49B9E8 100%, #1F4D60 43%);
+
+  --border-color: conic-gradient(
+    from 35deg,
+    #2a66802e 0deg,
+    #2a66802e 80deg,
+
+    #49b9e861 115deg,
+    #49b9e873 125deg,
+    #49b9e861 130deg,
+
+    #28627a33 200deg,
+    #28627a33 260deg,
+
+    #49b9e861 295deg,
+    #49b9e873 305deg,
+    #49b9e861 310deg,
+
+    #1f4d602e 360deg
+    );
+
   --form-background-color: linear-gradient(313deg, #033958 0%, #0f6b78 100%);
   --form-input-background-color: var(--reasons-card-background-color);
+
 }
 
-/* filter: blur(2px);
+/* полоска между экранами 
+filter: blur(2px);
 box-shadow: 0 0 24px 0 #00e0ff, 0 4px 15px 0 #4ad9ec, 0 3px 15px 0 rgba(0, 224, 255, 0.93); */

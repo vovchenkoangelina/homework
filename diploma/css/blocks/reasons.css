@@ -1,0 +1,99 @@
+.reasons__container {
+    position: relative;
+}
+
+.reasons__container::before {
+    content: "";
+    position: absolute;
+    width: 945px;
+    height: 945px;
+    background: url(../../decor/big-blurry-ellipse.svg) no-repeat center;
+    top: -550px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 50%;
+}
+
+.reasons__title {
+    padding-top: 20px;
+    padding-bottom: 58px;
+    max-width: 560px;
+}
+
+.reasons__list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.reasons__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    min-height: 212px;
+    padding: 32px 24px;
+    border-radius: 20px;
+    background: var(--reasons-card-background-color);
+    grid-column: span 3;
+    border-radius: 12px;
+}
+
+.reasons__card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2.5px;
+    border-radius: inherit;
+
+    background: var(--border-color);
+
+    -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+.reasons__card::after {
+    content: "";
+    position: absolute;
+    
+    width: 63px;
+    height: 32px;
+    background: url(../../decor/glow-ellipse.png) no-repeat center;
+    bottom: -16px;          
+    left: 10%;       
+    pointer-events: none;
+}
+
+
+.reasons__text {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.reasons__card--wide {
+    grid-column: span 4;
+}
+
+.reasons__icon {
+
+}
+
+ /* @media (max-width: 900px) {
+  .reasons__list {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+
+  .reasons__card,
+  .reasons__card--wide {
+    grid-column: auto; /* у всех ширина по колонке 
+   
+*/
+
