@@ -39,7 +39,6 @@
     border-radius: 20px;
     background: var(--reasons-card-background-color);
     grid-column: span 3;
-    border-radius: 12px;
 }
 
 .reasons__card::before {

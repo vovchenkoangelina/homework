@@ -1,35 +1,73 @@
 @font-face {
-  font-family: "Avenir Next Cyr";
-  src: local("AvenirNextCyrMedium"), local("AvenirNextCyr-Medium"),
-    url("../../fonts/avenirnextcyr-medium.woff2") format("woff2");
+  font-family: "AvenirNextCyr";
+  src: local("AvenirNextCyr-Medium"), local("AvenirNextCyrMedium"),
+    url("../../fonts/AvenirNextCyr-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir Next Cyr";
-  src: local("AvenirNextCyrDemi"), local("AvenirNextCyr-Demi"),
-    url("../../fonts/avenirnextcyr-demi.woff2") format("woff2");
+  font-family: "AvenirNextCyr";
+  src: local("AvenirNextCyr-demy"), local("AvenirNextCyrDemy"),
+    url("../../fonts/avenirnextcyr-demi.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir Next Cyr";
-  src: local("AvenirNextCyrBold"), local("AvenirNextCyr-Bold"),
-    url("../../fonts/avenirnextcyr-bold.woff2") format("woff2");
+  font-family: "AvenirNextCyr";
+  src: local("AvenirNextCyr-Bold"), local("AvenirNextCyrBold"),
+    url("../../fonts/AvenirNextCyr-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Avenir Next Cyr";
-  src: local("AvenirNextCyrHeavy"), local("AvenirNextCyr-Heavy"),
-    url("../../fonts/avenirnextcyr-heavy.woff2") format("woff2");
+/* @font-face {
+  font-family: "AvenirNextCyr";
+  src: local("AvenirNextCyr-Heavy"), local("AvenirNextCyrHeavy"),
+    url("../../fonts/avenirnextcyr-heavy.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+} */
+
+/* @font-face {
+  font-family: "Nunito";
+  src: local("Nunito-Medium"), local("NunitoMedium"),
+    url("../../fonts/Nunito-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito-SemiBold"), local("NunitoSemiBold"),
+    url("../../fonts/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito-Bold"), local("NunitoBold"),
+    url("../../fonts/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito-ExtraBold"), local("NunitoExtraBold"),
+    url("../../fonts/Nunito-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+} */

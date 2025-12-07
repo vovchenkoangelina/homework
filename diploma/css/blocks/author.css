@@ -1,0 +1,79 @@
+.author {
+    background-image: url(../../images/author-background.png); 
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.author__container {
+    
+}
+
+.author__title {
+    margin-bottom: 50px;
+}
+
+.author__content {
+    position: relative;
+    max-width: 500px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 160%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.author__content p {
+    z-index: 1;
+}
+
+.author__content::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 32px;
+    background: url(../../decor/glow-ellipse.png) no-repeat center;
+    z-index: 0;
+    left: -20px;
+    top: -5px;
+    z-index: 0;
+}
+
+.author__photo {
+    position: absolute;
+    bottom: 0;          
+    left: 50%;      
+    width: 441px;    
+    height: auto;     
+}
+
+
+.author__info {
+    position: absolute;
+    right: 30%;  
+    bottom: 80px;   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    z-index: 2;  
+}
+
+.author__name {
+    font-weight: 750;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--shadow-color);
+}
+
+.author__position {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+

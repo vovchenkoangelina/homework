@@ -4,14 +4,77 @@
 }
 
 .importants__title {
+    margin-bottom: 50px;
 }
 
 .importants__list {
+    display: flex;
+    flex-wrap: wrap;              
+    gap: 60px 25px; 
 }
+
 .importants__item {
-    max-width: 533px;
+    max-width: 568px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
 }
+
+.importants__item:nth-child(3),
+.importants__item:nth-child(4) {
+    flex-direction: row-reverse;
+    padding-left: 50px;
+}
+
 .importants__img {
+    display: block;
+    flex-shrink: 0;
+    width: 285px;                   
+    height: 203px;
+    border-radius: 0px;
+    object-fit: cover;
+    border-radius: 20px;
 }
+
+.importants__img-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 285px;
+    height: 203px;
+    border-radius: 20px;     
+}
+
+.importants__img-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2.5px;
+    border-radius: inherit;
+    background: var(--border-color);
+    -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.importants__img-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 32px;
+    background: url(../../decor/glow-ellipse.png) no-repeat center;
+    bottom: -16px;
+    left: 12%;        
+}
+
 .importants__text {
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 144%;
 }

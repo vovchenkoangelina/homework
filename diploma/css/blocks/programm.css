@@ -1,0 +1,137 @@
+.programm {
+}
+
+.programm__container {
+}
+.programm__title {
+}
+
+.programm__subtitle {
+    margin-top: 27px;
+    margin-bottom: 27px;
+    font-size: 18px;
+}
+.programm__levels {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.programm__level {
+
+}
+
+.programm__level-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 56px; 
+    position: relative;
+    padding-left: 43px;
+    height: 56px;
+    max-width: 1200px;
+    background: var(--gradient-background-text);
+    border-radius: 6px;
+}
+
+.programm__level-title--accent {
+    font-size: 15px;
+    color: #08b1b9;
+    white-space: nowrap;               /* чтобы не переносилось */
+    margin-left: 8px; 
+    font-weight: 500;
+}
+
+
+.programm__level-title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 17px;
+
+    border-radius: 100%;
+    background: linear-gradient(180deg, #00e0ff 0%, #4a8bec 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 224, 255, 0.56);
+}
+
+.programm__level-title::marker {
+    content: "";
+}
+
+.programm__level-title::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: url(../../icons/arrow-close.svg);
+}
+
+.programm__level-in-development {
+    position: absolute;
+    width: 102px;
+    margin-left: 20px;              
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    background: #00e0ff;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 162%;
+    text-transform: uppercase;
+    color: #08262b;
+    text-align: center;
+}
+
+details[open] .programm__level-title::after {
+    background: url(../../icons/arrow-open.svg);
+}
+
+.programm__steps {
+    list-style: none;           
+    counter-reset: step;   
+}
+.programm__step {
+    position: relative;
+    padding-left: 43px;  
+    margin-top: 34px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    counter-increment: step; 
+}
+
+.programm__step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: -3px;             
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: #002b3a;      
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.grogramm__step-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 131%;
+    color: var(--accent-color);
+    padding-bottom: 14px;
+}
+.programm__step-description {
+    font-size: 16px;
+    line-height: 131%;
+}
+
+
+

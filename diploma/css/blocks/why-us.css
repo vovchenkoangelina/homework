@@ -1,0 +1,57 @@
+.why-us {
+    background-image: url(../../images/brain-background.png); 
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.why-us__container {
+}
+
+.why-us__title {
+    margin-bottom: 38px;
+}
+
+.why-us__list {
+    max-width: 633px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.why-us__list-item {
+    display: flex;
+    gap: 21px;
+    align-items: flex-start; 
+    position: relative;
+}
+
+.why-us__list-item::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 32px;
+    background: url(../../decor/glow-ellipse.png) no-repeat center;
+    z-index: 0;
+    left: 40px;
+    top: -5px;
+}
+
+.why-us__list-icon {
+    transform: translateY(-10px);
+}
+
+.why-us__list-text {
+
+}
+
+.why-us__list-icon,
+.why-us__list-text {
+    z-index: 1;
+}
+
+
+
+.why-us__button {
+}

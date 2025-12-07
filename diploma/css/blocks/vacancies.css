@@ -1,0 +1,73 @@
+.vacancies {
+}
+
+.vacancies.section::before {
+    display: none;
+    visibility: hidden;
+}
+
+.vacancies.section::after {
+    display: none;
+    visibility: hidden;
+}
+
+.vacancies__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.vacancies__title {
+}
+
+.vacancies__all-link {
+    font-weight: 750;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    display: inline-flex;          
+    align-items: center;           
+    justify-content: center; 
+    color: var(--accent-color);
+    width: 183px;
+    height: 60px;
+    border: 2px solid var(--accent-color);
+    border-radius: 9px;
+}
+
+.vacancies__slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.vacancies__article {
+    position: relative;
+}
+
+
+.vacancies__slider-button {
+    position: absolute;
+    display: inline-flex;        
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;        
+    opacity: 90%;   
+    padding: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.vacancies__slider-button--prev {
+    top: 87px;
+    left: 21px;
+    background-color: #08262b;  
+}
+
+.vacancies__slider-button--next {
+    top: 87px;
+    right: 21px;
+    background: linear-gradient(180deg, rgba(3, 225, 255, 0.66) 0%, #13cdc2 100%); 
+    transform: rotate(180deg);
+}

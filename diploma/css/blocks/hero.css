@@ -7,7 +7,7 @@
     }
 
 .hero { 
-    padding-bottom: 178px;
+    padding-bottom: 55px;
 }
 
 .hero__container{
@@ -18,16 +18,17 @@
 
 .hero__header {
     max-width: 650px;
-    margin-top: 155px;
+    margin-top: 50px;
 }
 
 .hero__subtitle {
 }
 .hero__title {
     padding-bottom: 18px;
-    font-weight: 600;
+    /* font-weight: 600; */
+    font-weight: 500;
     font-size: 108px;
-    background: linear-gradient(180deg, #fff 31.75%, #1a3031 100%);
+    background: var(--hero-title-color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -39,7 +40,7 @@
 
 .hero__content {
     margin-top: 77px;
-    margin-bottom: 101px;
+    margin-bottom: 45px;
     display: flex;
     max-width: 576px;
 }
@@ -84,7 +85,7 @@
 
 .hero__content-title {
     margin-bottom: 16px;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 18px;
 }
 
@@ -95,19 +96,7 @@ color: var(--shadow-color);
 .hero__footer {
 }
 
-.sign-up-button {
-    color: var(--main-color);
-    font-weight: 750;
-    font-size: 12px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    text-align: center;
-    width: 479px;
-    height: 60px;
-    box-shadow: 0 7px 20px -7px var(--shadow-color);
-    background: var(--button-background-color);
-    border-radius: 9px;
-}
+
 
 .hero__footer-button {
     margin-right: 50px;
@@ -120,3 +109,4 @@ color: var(--shadow-color);
     display: inline-block; 
     transform: rotate(90deg);
 }
+
