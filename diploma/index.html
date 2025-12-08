@@ -21,7 +21,7 @@
     <title>VeraVla edu!</title>
 </head>
 <body class="page__body">
-    <div class="first-screen-wrapper">
+    <div class="first-screen-wrapper" id="first-screen-wrapper">
         <header class="header">
             <div class="container header__container">
                 <a href="/" class="header__logo logo">
@@ -33,29 +33,38 @@
         <section class="hero">
             <div class="container  hero__container">
                 <div class="hero__header">
-                    <p class="text text--gray hero__subtitle">Добро пожаловать в онлайн школу</p>
+                    <p class="hero__subtitle">Добро пожаловать в онлайн школу</p>
                     <h1 class="hero__title">VeraVla edu!</h1>
-                    <p class="hero__header-text text">Переквалифицируйся в разработчика искусственного интеллекта и получи высокооплачиваемую работу</p>
+                    <p class="hero__header-text">Переквалифицируйся в разработчика искусственного интеллекта и получи высокооплачиваемую работу</p>
                 </div>
                 <div class="hero__content">
                     <div class="hero__content-icon">
-                        <img class="hero__content-icon-img" src="./icons/diploma-icon.svg" width="39" height="39" alt="Значок с изображением сертификата">
+                        <img class="hero__content-icon-img" src="./icons/diploma-icon.svg" width="71" height="71" alt="Значок с изображением сертификата">
                     </div>
                     <div class="hero-content-text-wrapper">
                         <h2 class="hero__content-title">Мы обучаем с гарантией!</h2>
-                        <p class="hero__content-text text">
+                        <p class="hero__content-text">
                             Первый месяц действует гарантия 100% возврата денег, если тебя не устроят наши курсы
                         </p>
                     </div>
                 </div>
                 <div class="hero__footer">
-                    <a class="sign-up-button hero__footer-button" href="#">Записаться на ознакомительный вебинар</a>
-                    <a href="#" class="hero__footer-slider text--gray">Листайте вниз</a>
+                    <a class="sign-up-button hero__footer-button" href="#" data-modal-button="webinar" data-modal-speed="300">Записаться на ознакомительный вебинар</a>
+                    <a class="hero__footer-slider" href="#reasons">
+                        <span class="hero__footer-slider-text">Листайте вниз</span>
+                        <span class="hero__footer-slider-icon"></span>
+                    </a>
                 </div>
+                <a class="hero__consultation-link" href="#" data-modal-button="webinar" data-modal-speed="300">
+                    Бесплатная консультация
+                <span class="hero__consultation-icon">
+                <img class="hero__consultation-icon-img" src="./icons/headset-icon.svg" width="40" height="40" alt="">
+                </span>
+                </a>
             </div>
         </section>
     </div>
-        <section class="reasons section section--dark-bg">
+        <section class="reasons section section--dark-bg" id="reasons">
             <div class="container reasons__container">
                 <h2 class="reasons__title title">
                     <span class="title--accent">7 причин</span> почему именно мы? 
@@ -99,7 +108,7 @@
                     </ul>
             </div>
         </section>
-        <section class="AI section">
+        <section class="AI section section--light-bg">
             <div class="container">
                 <h2 class="AI__title title">
                     <span class="title--accent">Искусственный интеллект</span> - это круто?
@@ -122,7 +131,7 @@
                         <p class="AI__list-text">А самое вкусное то, что твоя зарплата будет расти вместе с твоими навыками. Стаж не так важен.</p>
                     </li>
                 </ul>
-                <a class="sign-up-button" href="#">Записаться на ознакомительный вебинар</a>
+                <a class="sign-up-button" href="#"  data-modal-button="webinar" data-modal-speed="300">Записаться на ознакомительный вебинар</a>
             </div>
         </section>
         <section class="importants section section--dark-bg">
@@ -192,10 +201,9 @@
                         <p class="why-us__list-text text">Обучение проходит в группе по 15 человек, которая внутри делится на 3 команды, и каждая команда выполняет собственный проект. Таким образом, студенты смогут прочувствовать тонкости командной разработки, и уже на этапе обучения окунуться в рабочую атмосферу AI специалиста.</p>
                     </li>
                     </ul>
-                <a class="sign-up-button why-us__button"  href="#">Записаться на ознакомительный вебинар</a>
+                <a class="sign-up-button why-us__button"  href="#"  data-modal-button="webinar" data-modal-speed="300">Записаться на ознакомительный вебинар</a>
             </div>
         </section>
-
         <section class="programm section section--dark-bg">
             <div class="container programm__container">
             <h2 class="programm__title title">
@@ -366,12 +374,11 @@
                                 </ol>
                         </details>
                     </div>
-                    <a class="sign-up-button hero__footer-button" href="#">Записаться на ознакомительный вебинар</a>
+                    <a class="sign-up-button hero__footer-button" href="#"  data-modal-button="webinar" data-modal-speed="300">Записаться на ознакомительный вебинар</a>
             </div>
 
             
         </section>
-
         <section class="author section section--light-bg">
             <div class="container author__container">
                 <h2 class="title author__title">Автор курса</h2>
@@ -506,9 +513,9 @@
                         <div class="article__info">
                             <h3 class="article__caption">Требуется администратор</h3>
                             <p class="article__text">
-                            Опыт работы . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  от 1 года
-                            Образование . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Высшее
-                            Возраст . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  21-35 лет
+                            Опыт работы . . . . . . . . . . . . . . . . . . . . . . . . . .. . . .  от 1 года<br>
+                            Образование . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Высшее<br>
+                            Возраст . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21-35 лет
                             </p>
                         </div>
                     </header>
@@ -524,9 +531,9 @@
                         <div class="article__info">
                             <h3 class="article__caption">Требуется менеджер</h3>
                             <p class="article__text">
-                            Опыт работы . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  от 1 года
-                            Образование . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Высшее
-                            Возраст . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  21-35 лет
+                            Опыт работы . . . . . . . . . . . . . . . . . . . . . . . . . .. . . .  от 1 года<br>
+                            Образование . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Высшее<br>
+                            Возраст . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21-35 лет
                             </p>
                         </div>
                     </header>
@@ -542,9 +549,9 @@
                         <div class="article__info">
                             <h3 class="article__caption">Требуется администратор</h3>
                             <p class="article__text">
-                            Опыт работы . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  от 1 года
-                            Образование . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Высшее
-                            Возраст . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  21-35 лет
+                            Опыт работы . . . . . . . . . . . . . . . . . . . . . . . . . .. . . .  от 1 года<br>
+                            Образование . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Высшее<br>
+                            Возраст . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21-35 лет
                             </p>
                         </div>
                     </header>
@@ -560,9 +567,9 @@
                         <div class="article__info">
                             <h3 class="article__caption">Требуется менеджер</h3>
                             <p class="article__text">
-                            Опыт работы . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  от 1 года
-                            Образование . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Высшее
-                            Возраст . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  21-35 лет
+                            Опыт работы . . . . . . . . . . . . . . . . . . . . . . . . . .. . . .  от 1 года<br>
+                            Образование . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Высшее<br>
+                            Возраст . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21-35 лет
                             </p>
                         </div>
                     </header>
@@ -635,5 +642,52 @@
 
   </div>
 </footer>
+
+                <a class="go-up-button" href="#first-screen-wrapper">
+                    <span class="go-up-button__icon">
+                        <img class="go-up-button__icon-img" src="./icons/arrow-up.svg" width="15" height="30" alt="">
+                    </span>
+                Подняться вверх
+                </a>
+
+
+        <div class="modal">
+      <div class="modal__window modal__webinar" data-modal-window="webinar">
+        <button class="modal__close" aria-label="Закрыть" title="Закрыть" data-modal-close>
+          <img class="modal__close-icon" src="./icons/modal-close-icon.svg" width="21" height="21" alt="Закрыть окно">
+        </button>
+        <div class="modal__content modal-webinar__content">
+          <h2 class="modal-webinar__title title"><span class="title--accent">Записаться</span> на ознакомительный вебинар</h2>
+          <form class="modal-webinar__form">
+            <label class="modal-webinar__label">
+                Ваше ФИО:
+              <span class="modal-buy__input-wrapper">
+              <input type="text" class="modal-buy__input" placeholder="Иван Иванович Иванов" name="name" required>
+              </span>
+            </label>
+            <label class="modal-webinar__label">
+                Номер телефона:
+                <span class="modal-buy__input-wrapper">
+                <input type="tel" class="modal-buy__input" placeholder="+7 (___) ___-__-__" required name="phone_number">
+            </span>
+            </label>
+            <label class="modal-webinar__label">
+                Ваш e-mail:
+                <span class="modal-buy__input-wrapper">
+                <input type="email" class="modal-buy__input" placeholder="name@gmail.com" required name="email">
+                </span>
+            </label>
+            <label class="modal-webinar__label">
+                Выберите дату и время вебинара:
+                <span class="modal-buy__input-wrapper">
+                <input type="datetime" class="modal-buy__input" placeholder="2021-12-05 18.00" required name="datetime">
+                </span>
+            </label>
+            <button class="modal-webinar__submit sign-up-button">Записаться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>

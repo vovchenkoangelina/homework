@@ -1,20 +1,17 @@
 .first-screen-wrapper {
-        min-height: 100vh;
-        background-image: url(../../images/hero-background.jpg); 
-        background-size: cover;
-        background-position: center right;
-        background-repeat: no-repeat;
-    }
-
-.hero { 
-    padding-bottom: 55px;
+    min-height: clamp(45.625rem, 38.491rem + 31.71vw, 53.75rem);
+    background-image: url(../../images/hero-background.jpg); 
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
 }
 
 .hero__container{
+    padding-top: 50px;
     position: relative;
+    flex-direction: column;   
+    min-height: 100%; 
 }
-
-
 
 .hero__header {
     max-width: 650px;
@@ -22,11 +19,14 @@
 }
 
 .hero__subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--secondary-color);
 }
+
 .hero__title {
     padding-bottom: 18px;
-    /* font-weight: 600; */
-    font-weight: 500;
+    font-weight: 600;
     font-size: 108px;
     background: var(--hero-title-color);
     background-clip: text;
@@ -35,48 +35,29 @@
 }
 
 .hero__header-text {
-    max-width: 560px;
+    max-width: 580px;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .hero__content {
     margin-top: 77px;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
     display: flex;
     max-width: 576px;
 }
 
 .hero__content-icon {
+    max-height: 71px;
+    max-width: 71px;
     position: relative;
+    top: -5px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 71px;
-    height: 71px;
     border-radius: 12px;
-    background: var(--reasons-card-background-color);
-}
-
-.hero__content-icon::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 2.5px;
-    border-radius: inherit;
-
-    background: var(--border-color);
-
-    -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-
-    pointer-events: none;
-}
-
-.hero__content-icon-img{
-    
+    background: var(--card-background-color);
 }
 
 .hero-content-text-wrapper {
@@ -90,23 +71,127 @@
 }
 
 .hero__content-text {
-color: var(--shadow-color);
+    color: var(--secondary-accent-color);
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .hero__footer {
+    margin-top: auto;        
+    padding-bottom: 40px;     
+    display: flex;
+    align-items: center;
 }
 
-
-
 .hero__footer-button {
-    margin-right: 50px;
+    margin-right: 111px;
 }
 
 .hero__footer-slider {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.hero__footer-slider-text {
+    font-weight: 600;
     font-size: 10px;
     letter-spacing: 0.36em;
     text-transform: uppercase;
-    display: inline-block; 
-    transform: rotate(90deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg); 
+}
+
+.hero__footer-slider-icon {
+    position: relative;
+    width: 20px;
+    height: 37px;
+    border: 1px solid var(--accent-color);
+    border-radius: 60px;
+}
+
+.hero__footer-slider-icon::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 100%;
+    box-shadow: 0 4px 10px 0 #4ad9ecbf;
+    animation: moving-circle 3s infinite;
+}
+
+@keyframes moving-circle {
+    0% {
+        transform: translate(-50%, 0%);
+    }
+    50% {
+        transform: translate(-50%, 13px);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+.hero__consultation-link {
+    position: absolute;
+    top: 50px;
+    left: -300px;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--secondary-accent-color);
+    transform: rotate(270deg);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero__consultation-icon {
+    position: relative;   
+    width: 100px;           
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);     
+}
+
+.hero__consultation-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;                     
+    border-radius: 50%;
+    background: var(--button-background-color);
+    box-shadow: 0 7px 20px -7px var(--shadow-color);
+    z-index: -1;    
+    animation: pulse 3s infinite;     
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+.hero__consultation-icon-img {
+    position: relative;
+    z-index: 1;                 
 }
 

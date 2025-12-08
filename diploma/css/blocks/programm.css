@@ -12,6 +12,7 @@
     font-size: 18px;
 }
 .programm__levels {
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     gap: 18px;

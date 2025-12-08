@@ -1,4 +1,6 @@
 .vacancies {
+    padding-top: 80px;
+    padding-bottom: 78px;
 }
 
 .vacancies.section::before {
@@ -16,8 +18,6 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-}
-.vacancies__title {
 }
 
 .vacancies__all-link {
@@ -40,10 +40,12 @@
     position: relative;
     width: 100%;
 }
+
 .vacancies__article {
     position: relative;
+    max-width: 390px;
+    width: 100%; 
 }
-
 
 .vacancies__slider-button {
     position: absolute;

@@ -5,20 +5,17 @@
     background-repeat: no-repeat;
 }
 
-.why-us__container {
-}
-
 .why-us__title {
     margin-bottom: 38px;
 }
 
 .why-us__list {
-    max-width: 633px;
+    margin-bottom: 60px;
+    max-width: 680px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 
 .why-us__list-item {
     display: flex;
@@ -43,15 +40,15 @@
 }
 
 .why-us__list-text {
-
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 144%;
 }
 
 .why-us__list-icon,
 .why-us__list-text {
     z-index: 1;
 }
-
-
 
 .why-us__button {
 }

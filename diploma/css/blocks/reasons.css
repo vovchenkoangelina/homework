@@ -17,7 +17,6 @@
 }
 
 .reasons__title {
-    padding-top: 20px;
     padding-bottom: 58px;
     max-width: 560px;
 }
@@ -26,7 +25,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .reasons__card {
@@ -37,8 +36,8 @@
     min-height: 212px;
     padding: 32px 24px;
     border-radius: 20px;
-    background: var(--reasons-card-background-color);
-    grid-column: span 3;
+    background: var(--card-background-color);
+    grid-column: span 3;  
 }
 
 .reasons__card::before {
@@ -47,9 +46,7 @@
     inset: 0;
     padding: 2.5px;
     border-radius: inherit;
-
     background: var(--border-color);
-
     -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -85,14 +82,14 @@
 
 }
 
- /* @media (max-width: 900px) {
-  .reasons__list {
+@media (width <= 1100px) {
+    .reasons__list {
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  }
+    }
 
-  .reasons__card,
-  .reasons__card--wide {
-    grid-column: auto; /* у всех ширина по колонке 
-   
-*/
+    .reasons__card {
+    grid-column: auto; 
+    }
+}
+
 
