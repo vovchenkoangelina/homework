@@ -1,5 +1,5 @@
-.page__body {
-  min-width: 375px;
+.page, .page__body {
+  min-width: 360px;
   font-family: var(--font-family);
   color: var(--main-color);
   overflow-x: hidden;
@@ -13,8 +13,8 @@
 
 .section {
   position: relative;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: clamp(50px, 1.16rem + 8.38vw, 120px);
+  padding-bottom: clamp(50px, 1.16rem + 8.38vw, 120px);
 }
 
 .section--dark-bg {
@@ -68,6 +68,7 @@ input:focus {
 
 .phone {
     display: flex;
+    align-items: center; 
     gap: 12px;
     font-weight: 500;
     font-size: 18px;
@@ -86,7 +87,7 @@ input:focus {
 
 .title {
   font-weight: 500;
-  font-size: 54px;
+  font-size: clamp(34px, 1.589rem + 2.38vw, 54px);
   text-transform: uppercase;
 }
 
@@ -95,7 +96,15 @@ input:focus {
 }
 
 .sign-up-button {
-    padding: 25px 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    max-width: clamp(300px, 40vw, 480px);
+    width: 100%;   
+    text-align: center;
+    white-space: normal; 
     color: var(--main-color);
     font-weight: 700;
     font-size: 12px;
@@ -106,123 +115,11 @@ input:focus {
     border-radius: 9px;
 }
 
-.article {
-    max-width: 387px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-inline: auto;
-}
-
-.article__header {
-
-}
-.article__img {
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.article__img-wrapper {
-    position: relative;
-    flex-shrink: 0;
-    width: 100%; 
-    height: auto;
-    border-radius: 20px;
-}
-
-.article__img-wrapper::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 2.5px;
-    border-radius: inherit;
-    background: var(--border-color);
-    -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-}
-
-.article__img-wrapper::after {
-    content: "";
-    position: absolute;
-    width: 63px;
-    height: 32px;
-    background: url(../../decor/glow-ellipse.png) no-repeat center;
-    bottom: -16px;
-    left: 12%;        
-}
-
-.article__info {
-}
-
-.article__date {
-    position: absolute;
-    top: 21px;
-    right: 25px;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 175%;
-}
-
-.article__date::before {
-    content: "";
-    margin-right: 6px; 
-    display: inline-block;  
-    width: 9px;
-    height: 9px;
-    background: url(../../icons/calendar-icon.svg);
-}
-
-.article__caption {
-    margin-top: 29px;
-    margin-bottom: 18px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 131%;
-}
-
-.article__text {
-    font-size: 15px;
-    line-height: 1.4;
-
-  /* обрезка текста до трёх строк */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;           
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-
-  /* маска чтобы сделать эффект прозрачности для низа текста */
-    -webkit-mask-image: linear-gradient(
-    to bottom,
-    #000 0%,
-    #000 70%,
-    transparent 100%
-    );
-    mask-image: linear-gradient(
-    to bottom,
-    #000 0%,
-    #000 70%,
-    transparent 100%
-    );
-}
-
-.article__footer {
-    margin-top: 10px;
-}
-
-.article__more-details-link {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 175%;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: var(--accent-color);
+@media (width <= 768px) {
+  .sign-up-button {
+    display: block;         
+    margin: 0 auto;
+  }
 }
 
 /* Кнопка "подняться вверх" */
@@ -230,7 +127,7 @@ input:focus {
 .go-up-button {
     position: absolute;
     top: 50px;
-    left: -300px;
+    left: 0;
     font-weight: 500;
     font-size: 10px;
     letter-spacing: 0.36em;

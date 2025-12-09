@@ -1,8 +1,19 @@
 .why-us {
-    background-image: url(../../images/brain-background.png); 
-    background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
+    background: var(--section-background-color-light);
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden; 
+}
+
+.why-us__inner {
+    position: relative;
+}
+
+.why-us__content {
+    position: relative;
+    z-index: 2;          
+    max-width: 900px;   
 }
 
 .why-us__title {
@@ -10,8 +21,8 @@
 }
 
 .why-us__list {
-    margin-bottom: 60px;
     max-width: 680px;
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -20,7 +31,7 @@
 .why-us__list-item {
     display: flex;
     gap: 21px;
-    align-items: flex-start; 
+    align-items: flex-start;
     position: relative;
 }
 
@@ -51,4 +62,53 @@
 }
 
 .why-us__button {
+    position: relative;
+    z-index: 2;    
+    display: inline-flex;
+    margin-top: 24px;
+}
+
+.why-us__brain {
+    position: absolute;
+    right: -30%;
+    bottom: -10%;
+    z-index: 1;                
+    pointer-events: none;   
+}
+
+@media (width <= 1200px) {
+    .why-us {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .why-us__content {
+        max-width: 100%;
+    }
+
+    .why-us__list {
+    max-width: max-content;
+    }
+
+    .why-us__brain {
+        position: static;        
+        display: block;
+        width: min(80%, 420px);  
+        margin: 32px auto 0;  
+    }
+
+    .why-us__button {
+        display: block;
+        margin: 32px auto 0;     
+    }
+}
+@media (width <= 576px) {
+    .why-us {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .why-us__list {
+        margin-bottom: 40px;
+    }
 }

@@ -1,0 +1,88 @@
+.article__img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;            
+    border-radius: 20px;
+}
+
+.article__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;       
+}
+
+.article__img-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2.5px;
+    border-radius: inherit;
+    background: var(--border-color);
+    -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.article__img-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 32px;
+    background: url(../../decor/glow-ellipse.png) no-repeat center;
+    bottom: -16px;
+    left: 12%;
+}
+
+.article__date {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 175%;
+}
+
+.article__date::before {
+    content: "";
+    margin-right: 6px; 
+    display: inline-block;  
+    width: 9px;
+    height: 9px;
+    background: url(../../icons/calendar-icon.svg);
+}
+
+.article__caption {
+    margin: 0 0 18px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 131%;
+}
+
+.article__text {
+    font-size: 15px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+    mask-image: linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+}
+
+.article__footer {
+    margin-top: 10px;
+}
+
+.article__more-details-link {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 175%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--accent-color);
+}
