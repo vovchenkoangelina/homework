@@ -1,11 +1,23 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .modal__webinar {
     width: 320px;
 }
 
 .modal-webinar__content {
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .modal-webinar__title {
@@ -17,14 +29,24 @@
 }
 
 .modal-webinar__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 16px;
 }
 
 .modal-webinar__label {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 8px;
     font-weight: 500;
     font-size: 13px;
@@ -47,6 +69,9 @@
     border-radius: inherit;
     background: var(--border-color); /* или градиент, если хочешь */
     -webkit-mask:
+    -webkit-gradient(linear, left top, left bottom, color-stop(0, #000)) content-box,
+    -webkit-gradient(linear, left top, left bottom, color-stop(0, #000));
+    -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
@@ -66,6 +91,22 @@
     color: var(--main-color);
     font-size: 15px;
     line-height: 1.3;
+}
+
+.modal-buy__input::-webkit-input-placeholder {
+    color: var(--secondary-color);
+}
+
+.modal-buy__input::-moz-placeholder {
+    color: var(--secondary-color);
+}
+
+.modal-buy__input:-ms-input-placeholder {
+    color: var(--secondary-color);
+}
+
+.modal-buy__input::-ms-input-placeholder {
+    color: var(--secondary-color);
 }
 
 .modal-buy__input::placeholder {

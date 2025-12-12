@@ -1,6 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .why-us {
-    background: var(--section-background-color-light);
-    color: #ffffff;
+    background: url(../../images/brain-background.webp), var(--section-background-color-light);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: bottom right;
     padding-top: 80px;
     padding-bottom: 80px;
     overflow: hidden; 
@@ -23,15 +32,24 @@
 .why-us__list {
     max-width: 680px;
     margin-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
 }
 
 .why-us__list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 21px;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     position: relative;
 }
 
@@ -47,7 +65,9 @@
 }
 
 .why-us__list-icon {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
 }
 
 .why-us__list-text {
@@ -64,20 +84,23 @@
 .why-us__button {
     position: relative;
     z-index: 2;    
+    display: -webkit-inline-box;    
+    display: -ms-inline-flexbox;    
     display: inline-flex;
     margin-top: 24px;
 }
 
-.why-us__brain {
-    position: absolute;
-    right: -30%;
-    bottom: -10%;
-    z-index: 1;                
-    pointer-events: none;   
+.why-us__brain-img-tablet {
+    display: none;
+}
+
+.why-us__brain-img-mobile {
+    display: none;
 }
 
 @media (width <= 1200px) {
     .why-us {
+        background: var(--section-background-color-light);
         padding-top: 60px;
         padding-bottom: 60px;
     }
@@ -87,15 +110,14 @@
     }
 
     .why-us__list {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
     max-width: max-content;
     }
 
-    .why-us__brain {
-        position: static;        
-        display: block;
-        width: min(80%, 420px);  
-        margin: 32px auto 0;  
-    }
+    .why-us__brain-img-tablet {
+    display: block;
+}
 
     .why-us__button {
         display: block;
@@ -112,3 +134,16 @@
         margin-bottom: 40px;
     }
 }
+
+@media (width <= 360px) {
+    .why-us__brain-img-tablet {
+    display: none;
+}
+
+    .why-us__brain-img-mobile {
+    display: block;
+}
+}
+
+
+

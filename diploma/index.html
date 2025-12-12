@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +11,39 @@
     <script src="./js/index.js" type="module"></script>
     <title>VeraVla edu!</title>
 </head>
+
 <body class="page__body">
     <div class="first-screen-wrapper" id="first-screen-wrapper">
+        <div class="header__menu" aria-hidden="true">
+            <div class="header__menu-inner">
+                <div class="header__menu-row">
+                    <img class="header__menu-icon" src="./icons/phone-icon.svg" width="37" height="35" alt=""
+                        aria-hidden="true">
+
+                    <a class="header__menu-number" href="tel:+821075269192">
+                        + 82 (10) 7526-9192
+                    </a>
+
+                    <button class="header__menu-close" type="button" aria-label="Закрыть номер телефона">
+                        <img src="./icons/cross-icon.svg" width="22" height="22" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
         <header class="header">
             <div class="container header__container">
                 <a href="/" class="header__logo logo">
                     <img class="logo__img" src="./icons/logo.svg" width="287" height="86" alt="Логотип VeraVla edu">
                 </a>
                 <a class="header__phone phone" href="tel:+821075269192">+ 82 (10) 7526-9192</a>
+                <button class="header__burger burger" type="button" aria-label="Открыть номер телефона"
+                    aria-expanded="false">
+                    <img class="burger__icon-menu" src="./icons/phone-icon.svg" width="37" height="35" alt="Телефон">
+                    <img class="burger__icon-cross" src="./icons/cross-icon.svg" width="22" height="22" alt="Закрыть">
+                </button>
             </div>
         </header>
+
         <section class="hero">
             <div class="container hero__container">
                 <div class="hero__header">
@@ -33,7 +57,7 @@
                 <div class="hero__content">
                     <div class="hero__content-icon">
                         <img class="hero__content-icon-img" src="./icons/diploma-icon.svg" width="71" height="71"
-                            alt="Значок с изображением сертификата">
+                            alt="Изображением сертификата">
                     </div>
                     <div class="hero-content-text-wrapper">
                         <h2 class="hero__content-title">Мы обучаем с гарантией!</h2>
@@ -43,16 +67,24 @@
                     </div>
                 </div>
                 <div class="hero__visual">
-                    <img class="hero__img" src="./images/nevron.jpg" width="988" height="764" alt="">
-
                     <a class="hero__consultation-link" href="#" data-modal-button="webinar" data-modal-speed="300">
                         <span class="hero__consultation-text">Бесплатная консультация</span>
                         <span class="hero__consultation-icon">
                             <img class="hero__consultation-icon-img" src="./icons/headset-icon.svg" width="40"
-                                height="40" alt="">
+                                height="40" alt="" aria-hidden="true">
                         </span>
                     </a>
                 </div>
+                <picture>
+                    <source srcset="./images/hero-background-tablet.webp" />
+                    <img class="hero__hero-img-tablet" src="./images/hero-background-tablet.jpg" width="1588"
+                        height="718" alt="" aria-hidden="true">
+                </picture>
+                <picture>
+                    <source srcset="./images/hero-background-mobile.webp" />
+                    <img class="hero__hero-img-mobile" src="./images/hero-background-mobile.jpg" width="992"
+                        height="717" alt="" aria-hidden="true">
+                </picture>
                 <div class="hero__footer">
                     <a class="sign-up-button hero__footer-button" href="#" data-modal-button="webinar"
                         data-modal-speed="300">
@@ -150,9 +182,18 @@
                         Стаж не так важен.</p>
                 </li>
             </ul>
-            <img class="AI__img" src="./images/AI-img.png" width="937" height="625" alt="">
-            <a class="sign-up-button AI__button" href="#" data-modal-button="webinar" data-modal-speed="300">Записаться
-                на ознакомительный вебинар</a>
+            <picture>
+                <source srcset="./images/product-slides/AI-bg-tablet.webp" />
+                <img class="AI__AI-img-tablet" src="./images/AI-bg-tablet.png" width="1920" height="913" alt="">
+            </picture>
+            <picture>
+                <source srcset="./images/product-slides/AI-bg-mobile.webp" />
+                <img class="AI__AI-img-mobile" src="./images/AI-bg-mobile.png" width="992" height="615"
+                    alt="Изображение нейросети в виде цифрового мозга">
+            </picture>
+                <a class="sign-up-button AI__button" href="#" data-modal-button="webinar"
+                    data-modal-speed="300">Записаться
+                    на ознакомительный вебинар</a>
         </div>
     </section>
     <section class="importants section section--dark-bg">
@@ -163,8 +204,11 @@
             <ul class="importants__list">
                 <li class="importants__item">
                     <div class="importants__img-wrapper">
+                        <picture>
+                <source srcset="./images/important/impotant1.webp" />
                         <img class="importants__img" width="285" height="203" src="./images/impotant/impotant1.png"
-                            alt="">
+                            alt="Человек держит в руках планшет с голограммой мозга">
+                            </picture>
                     </div>
                     <p class="importants__text">
                         Искусственный интеллект - это не одна дисциплина, как думают многие, а совокупность различных
@@ -173,8 +217,11 @@
                 </li>
                 <li class="importants__item">
                     <div class="importants__img-wrapper">
+                        <picture>
+                <source srcset="./images/important/impotant2.webp" />
                         <img class="importants__img" width="285" height="203" src="./images/impotant/impotant2.png"
-                            alt="">
+                            alt="Человек сосредоточенно печатает на ноутбуке">
+                            </picture>
                     </div>
                     <p class="importants__text">
                         Подготовка реально хороших специалистов требует времени, краткосрочные курсы эффекта не дают.
@@ -182,8 +229,11 @@
                 </li>
                 <li class="importants__item">
                     <div class="importants__img-wrapper">
+                        <picture>
+                <source srcset="./images/important/impotant3.webp" />
                         <img class="importants__img" width="285" height="203" src="./images/impotant/impotant3.png"
-                            alt="">
+                            alt="Множество людей сидят в аудитории и смотрят презентацию на проекторе">
+                            </picture>
                     </div>
                     <p class="importants__text">
                         Большинство менторов никогда не работали над реальными проектами. Они изучали все по видеоурокам
@@ -192,8 +242,11 @@
                 </li>
                 <li class="importants__item">
                     <div class="importants__img-wrapper">
+                        <picture>
+                <source srcset="./images/important/impotant4.webp" />
                         <img class="importants__img" width="285" height="203" src="./images/impotant/impotant4.png"
-                            alt="">
+                            alt="Крупным планом: руки на клавиатуре ноутбука">
+                            </picture>
                     </div>
                     <p class="importants__text">
                         На многих курсах преподают готовые/идеальные кейсы без всяких сложностей, поэтому студенты после
@@ -258,10 +311,16 @@
                         </li>
                     </ul>
                 </div>
-
-                <img class="why-us__brain" src="./images/brain.png" width="928" height="757"
+                <picture>
+                <source srcset="./images/brain-bg-tablet.webp" />
+                <img class="why-us__brain-img-tablet" src="./images/brain-bg-tablet.png" width="1918" height="562"
+                    alt="">
+                    </picture>
+                    <picture>
+                <source srcset="./images/brain-bg-mobile.webp" />
+                <img class="why-us__brain-img-mobile" src="./images/brain-bg-mobile.png" width="360" height="340"
                     alt="Изображение нейросети в виде цифрового мозга">
-
+                    </picture>
                 <a class="sign-up-button why-us__button" href="#" data-modal-button="webinar" data-modal-speed="300">
                     Записаться на ознакомительный вебинар
                 </a>
@@ -537,7 +596,11 @@
                 </div>
             </div>
             <div class="author__figure">
-                <img class="author__photo" src="./images/author.png" width="441" height="672" alt="" aria-hidden="true">
+                <picture>
+                <source srcset="./images/author.webp" />
+                <img class="author__photo" src="./images/author.png" width="441" height="672"
+                    alt="Уверенного вида мужчина в очках стоит сложив руки на груди">
+                    </picture>
                 <div class="author__info">
                     <p class="author__name">Владимир Ким</p>
                     <p class="author__position">Ведущий специалист</p>
@@ -557,8 +620,11 @@
                         <div class="news-card">
                             <div class="news-card__top">
                                 <div class="article__img-wrapper">
+                                    <picture>
+                <source srcset="./images/news/news1.webp" />
                                     <img class="article__img" src="./images/news/news1.png" width="387" height="236"
                                         alt="">
+                                        </picture>
                                     <div class="article__date-wrapper">
                                         <img class="article__date-icon" src="./icons/calendar.svg" alt="">
                                         <time class="article__date" datetime="2021-05-24">24 мая 2021</time>
@@ -591,8 +657,11 @@
                         <div class="news-card">
                             <div class="news-card__top">
                                 <div class="article__img-wrapper">
+                                    <picture>
+                <source srcset="./images/news/news2.webp" />
                                     <img class="article__img" src="./images/news/news2.png" width="387" height="236"
                                         alt="">
+                                        </picture>
                                     <div class="article__date-wrapper">
                                         <img class="article__date-icon" src="./icons/calendar.svg" alt="">
                                         <time class="article__date" datetime="2021-05-24">24 мая 2021</time>
@@ -619,8 +688,11 @@
                         <div class="news-card">
                             <div class="news-card__top">
                                 <div class="article__img-wrapper">
+                                    <picture>
+                <source srcset="./images/news/news3.webp" />
                                     <img class="article__img" src="./images/news/news3.png" width="387" height="236"
                                         alt="">
+                                        </picture>
                                     <div class="article__date-wrapper">
                                         <img class="article__date-icon" src="./icons/calendar.svg" alt="">
                                         <time class="article__date" datetime="2021-05-24">24 мая 2021</time>
@@ -647,8 +719,11 @@
                         <div class="news-card">
                             <div class="news-card__top">
                                 <div class="article__img-wrapper">
+                                    <picture>
+                <source srcset="./images/news/news4.webp" />
                                     <img class="article__img" src="./images/news/news4.png" width="387" height="236"
                                         alt="">
+                                        </picture>
                                     <div class="article__date-wrapper">
                                         <img class="article__date-icon" src="./icons/calendar.svg" alt="">
                                         <time class="article__date" datetime="2021-05-24">24 мая 2021</time>
@@ -696,8 +771,11 @@
                         <div class="vacancy-card">
                             <div class="vacancy-card__top">
                                 <div class="article__img-wrapper">
+                                    <picture>
+                <source srcset="./images/vacancies/vacancies1.webp" />
                                     <img class="article__img" src="./images/vacancies/vacancies1.png" width="387"
                                         height="236" alt="">
+                                        </picture>
                                 </div>
                             </div>
                             <div class="vacancy-card__bottom">
@@ -724,8 +802,11 @@
                         <div class="vacancy-card">
                             <div class="vacancy-card__top">
                                 <div class="article__img-wrapper">
+                                    <picture>
+                <source srcset="./images/vacancies/vacancies2.webp" />
                                     <img class="article__img" src="./images/vacancies/vacancies2.png" width="387"
                                         height="236" alt="">
+                                        </picture>
                                 </div>
                             </div>
 
@@ -750,8 +831,11 @@
                         <div class="vacancy-card">
                             <div class="vacancy-card__top">
                                 <div class="article__img-wrapper">
+                                    <picture>
+                <source srcset="./images/vacancies/vacancies3.webp" />
                                     <img class="article__img" src="./images/vacancies/vacancies3.png" width="387"
                                         height="236" alt="">
+                                        </picture>
                                 </div>
                             </div>
 
@@ -776,8 +860,11 @@
                         <div class="vacancy-card">
                             <div class="vacancy-card__top">
                                 <div class="article__img-wrapper">
+                                    <picture>
+                <source srcset="./images/vacancies/vacancies4.webp" />
                                     <img class="article__img" src="./images/vacancies/vacancies4.png" width="387"
                                         height="236" alt="">
+                                        </picture>
                                 </div>
                             </div>
                             <div class="vacancy-card__bottom">
@@ -863,15 +950,12 @@
             </div>
         </div>
     </footer>
-
-    <!-- Кнопка вверх -->
-    <!-- <a class="go-up-button" href="#first-screen-wrapper">
+    <a class="go-up-button" href="#first-screen-wrapper">
         <span class="go-up-button__icon">
             <img class="go-up-button__icon-img" src="./icons/arrow-up.svg" width="15" height="30" alt="">
         </span>
-            Подняться вверх
-        </a> -->
-
+        <span class="go-up-button__text">Подняться вверх</span>
+    </a>
     <div class="modal">
         <div class="modal__window modal__webinar" data-modal-window="webinar">
             <button class="modal__close" aria-label="Закрыть" title="Закрыть" data-modal-close>
@@ -916,4 +1000,5 @@
         </div>
     </div>
 </body>
+
 </html>

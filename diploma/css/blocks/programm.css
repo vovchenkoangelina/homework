@@ -1,10 +1,11 @@
-.programm {
-}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
-.programm__container {
-}
-.programm__title {
-}
+
 
 .programm__subtitle {
     margin-top: 27px;
@@ -13,19 +14,25 @@
 }
 .programm__levels {
     margin-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 18px;
 }
 
-.programm__level {
-
-}
 
 .programm__level-title {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    align-items:baseline;
+    -webkit-box-align:baseline; 
+        -ms-flex-align:baseline; 
+            align-items:baseline;
     gap: 10px;
     font-weight: 700;
     font-size: 20px;
@@ -52,8 +59,11 @@
     top: 20px;
     left: 17px;
     border-radius: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00e0ff), to(#4a8bec));
+    background: -o-linear-gradient(top, #00e0ff 0%, #4a8bec 100%);
     background: linear-gradient(180deg, #00e0ff 0%, #4a8bec 100%);
-    box-shadow: 0 4px 8px 0 rgba(0, 224, 255, 0.56);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 224, 255, 0.56);
+            box-shadow: 0 4px 8px 0 rgba(0, 224, 255, 0.56);
 }
 
 .programm__level-title::marker {
@@ -65,7 +75,9 @@
     position: absolute;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 32px;
     height: 32px;
     background: url(../../icons/arrow-close.svg);
@@ -75,6 +87,8 @@
     margin-top: 4px;
     padding: 2px 10px;
     display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;          
     background: #00e0ff;
     font-weight: 500;
@@ -113,9 +127,15 @@ details[open] .programm__level-title::after {
     background: var(--accent-color);
     color: #002b3a;      
     font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .grogramm__step-title {
@@ -132,9 +152,13 @@ details[open] .programm__level-title::after {
 
 @media(width <= 768px) {
     .programm__level-title {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
+
 
 
 

@@ -1,24 +1,31 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .first-screen-wrapper {
-  position: relative; /* ← теперь абсолюты считаются от всего экрана */
   min-height: clamp(45.625rem, 38.491rem + 31.71vw, 53.75rem);
-  background-image: url(../../images/hero-background.jpg);
-  background-size: cover;
-  background-position: center right;
+  background: url(../../images/hero-background.webp), var(--section-background-color-light);
+  background-size: auto;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
 
 .hero__container {
-  position: static;      /* убираем relative, чтобы не перехватывал кнопку */
+  position: relative;     
   padding-top: 50px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100%;
 }
 
 .hero__header,
 .hero__content,
 .hero__footer {
-  position: relative;
   z-index: 2;
 }
 
@@ -55,6 +62,8 @@
 .hero__content {
   margin-top: 77px;
   margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 576px;
 }
@@ -64,10 +73,17 @@
   max-width: 71px;
   position: relative;
   top: -5px;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 12px;
   background: var(--card-background-color);
 }
@@ -93,12 +109,17 @@
 
 .hero__consultation-link {
   position: absolute;
-  top: 50%;
-  left: clamp(2rem, 6vw, 4rem); /* «резиновый» отступ от левого края экрана */
-  transform: translateY(-50%) rotate(-90deg);
-
+  top: 180px;
+  left: -300px;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+      -ms-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
 
   font-weight: 500;
@@ -119,11 +140,23 @@
   width: 100px;
   height: 100px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: -webkit-box;
 
-  transform: rotate(90deg); /* компенсируем поворот ссылки */
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+
+  -webkit-transform: rotate(90deg);
+
+      -ms-transform: rotate(90deg);
+
+          transform: rotate(90deg); 
 }
 
 .hero__consultation-icon::before {
@@ -132,9 +165,11 @@
   inset: 0;
   border-radius: 50%;
   background: var(--button-background-color);
-  box-shadow: 0 7px 20px -7px var(--shadow-color);
+  -webkit-box-shadow: 0 7px 20px -7px var(--shadow-color);
+          box-shadow: 0 7px 20px -7px var(--shadow-color);
   z-index: -1;
-  animation: pulse 3s infinite;
+  -webkit-animation: pulse 3s infinite;
+          animation: pulse 3s infinite;
 }
 
 .hero__consultation-icon-img {
@@ -142,18 +177,28 @@
   z-index: 1;
 }
 
+@-webkit-keyframes pulse {
+  0%   { -webkit-transform: scale(1.1); transform: scale(1.1); }
+  50%  { -webkit-transform: scale(1); transform: scale(1);   }
+  100% { -webkit-transform: scale(1.1); transform: scale(1.1); }
+}
+
 @keyframes pulse {
-  0%   { transform: scale(1.1); }
-  50%  { transform: scale(1);   }
-  100% { transform: scale(1.1); }
+  0%   { -webkit-transform: scale(1.1); transform: scale(1.1); }
+  50%  { -webkit-transform: scale(1); transform: scale(1);   }
+  100% { -webkit-transform: scale(1.1); transform: scale(1.1); }
 }
 
 
 .hero__footer {
   margin-top: auto;
   padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero__footer-button {
@@ -162,9 +207,16 @@
 
 .hero__footer-slider {
   position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 32px;
   color: var(--secondary-color);
   text-decoration: none;
@@ -175,9 +227,13 @@
   font-size: 10px;
   letter-spacing: 0.36em;
   text-transform: uppercase;
-  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   text-orientation: mixed;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .hero__footer-slider-icon {
@@ -193,41 +249,59 @@
   position: absolute;
   top: 6px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 10px;
   height: 10px;
   background: var(--accent-color);
   border-radius: 100%;
-  box-shadow: 0 4px 10px 0 #4ad9ecbf;
-  animation: moving-circle 3s infinite;
+  -webkit-box-shadow: 0 4px 10px 0 #4ad9ecbf;
+          box-shadow: 0 4px 10px 0 #4ad9ecbf;
+  -webkit-animation: moving-circle 3s infinite;
+          animation: moving-circle 3s infinite;
+}
+
+@-webkit-keyframes moving-circle {
+  0% {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 13px);
+            transform: translate(-50%, 13px);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
 }
 
 @keyframes moving-circle {
   0% {
-    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
   50% {
-    transform: translate(-50%, 13px);
+    -webkit-transform: translate(-50%, 13px);
+            transform: translate(-50%, 13px);
   }
   100% {
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
 
-/* Картинка нейрона по умолчанию только для мобилки */
-.hero__img {
-  display: none;
-  max-width: 720px;
-  width: 100%;
-  height: auto;
-  margin: 40px auto 0;
+.hero__hero-img-tablet {
+    display: none;
 }
 
-/* ===== АДАПТИВ ===== */
+.hero__hero-img-mobile {
+    display: none;
+}
 
  @media (width <= 992px) {
   .first-screen-wrapper {
-    background-image: none;
     background: var(--section-background-color-light);
   }
 
@@ -240,19 +314,21 @@
     top: 16px;
     right: 16px;
     left: auto;
-    transform: none;
-    flex-direction: column;
-    align-items: center;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 12px;
   }
 
   .hero__header {
     margin-top: 30px;
-    margin-inline: auto;
-    text-align: center;
-  }
-
-  .hero__header-text {
     margin-inline: auto;
   }
 
@@ -260,13 +336,10 @@
     margin-inline: auto;
   }
 
-  .hero__img {
-    display: block;
-    margin: 0 auto;
-  }
-
   .hero__consultation-icon {
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 
   .hero__consultation-text {
@@ -292,9 +365,19 @@
   .hero__footer-slider {
     display: none;
   }
+
+  .hero__hero-img-tablet {
+    display: block;
+}
+
 }
 
 @media (width <= 567px) {
+    .first-screen-wrapper {
+    background: var(--section-background-color-light);
+  }
+
+
   .hero__subtitle {
     font-size: 16px;
   }
@@ -319,5 +402,13 @@
   .hero__consultation-icon-img {
     width: 25px;
     height: 25px;
+}
+
+  .hero__hero-img-tablet {
+    display: none;
+}
+
+.hero__hero-img-mobile {
+    display: block;
 }
 }

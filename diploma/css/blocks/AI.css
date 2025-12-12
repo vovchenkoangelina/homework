@@ -1,6 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .AI {
-  background: var(--section-background-color-light);
-  color: #fff;
+  background: url(../../images/AI-background.webp), var(--section-background-color-light);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
   padding-top: 80px;
   padding-bottom: 80px;
   overflow: hidden;
@@ -25,16 +34,25 @@
 
 .AI__list {
   margin-bottom: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
   max-width: 700px;
 }
 
 .AI__list-item {
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: relative;
   gap: 12px;
   font-size: 15px;
@@ -78,21 +96,24 @@
 .AI__button {
   position: relative;
   z-index: 2;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: 32px;
 }
 
-.AI__img {
-  opacity: 30%;
-  position: absolute;
-  right: 10%;
-  bottom: 10%;
-  z-index: 1;
-  pointer-events: none;
+.AI__AI-img-tablet {
+    display: none;
 }
 
-@media (max-width: 992px) {
+.AI__AI-img-mobile {
+    display: none;
+}
+
+
+@media (width <= 992px) {
   .AI {
+    background: var(--section-background-color-light);
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -101,14 +122,8 @@
     max-width: 100%;
   }
 
-  .AI__img {
-    position: static;
-    transform: none;
+  .AI__AI-img-tablet {
     display: block;
-    max-width: min(100%, 440px);
-    width: 100%;
-    margin: 32px auto 0;
-    pointer-events: auto;
   }
 
   .AI__button {
@@ -118,6 +133,16 @@
 
   .AI__list {
     margin-bottom: 40px;
+  }
+}
+
+@media (width <= 720px) {
+    .AI__AI-img-tablet {
+    display: none;
+  }
+
+    .AI__AI-img-mobile {
+    display: block;
   }
 }
 

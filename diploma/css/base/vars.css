@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
 
     --font-family: "AvenirNextCyr";
@@ -20,7 +27,7 @@
   --translucent-gradient-background-text: linear-gradient(90deg, #1f3f4d8a 0%, #1f4b5e00 100%);
   --gradient-background-text: linear-gradient(313deg, #073447 0%, #08262b 100%);
   --form-background-color: linear-gradient(313deg, #033958 0%, #0f6b78 100%);
-  --form-input-background-color: linear-gradient(180deg, rgba(0, 224, 255, 0.11) 0%, rgba(0, 224, 255, 0.11) 100%);
+  --form-input-background-color: linear-gradient(180deg, #00e0ff1c 0%, #00e0ff1c 100%);
 
   /* рамки и тени */
     --border-color: conic-gradient(
