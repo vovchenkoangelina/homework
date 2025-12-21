@@ -1,4 +1,4 @@
-import { todoKeys, errTodoNotFound } from "./todos/constants.js";
+import { todoKeys, errTodoNotFound } from "./constants.js";
 
 const getNewTodoId = todos =>
   todos.reduce((maxId, todo) => Math.max(maxId, todo[todoKeys.id]), 0) + 1;

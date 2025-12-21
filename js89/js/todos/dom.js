@@ -20,16 +20,16 @@ const createTodoElement = todo => {
   return todoElement;
 };
 
-export const renderTodos = (todos) => {
+export const renderTodos = todos => {
   todosElement.innerHTML = "";
   todos.forEach(todo => {
     const todoElement = createTodoElement(todo);
     if (todo[todoKeys.is_completed]) {
       todoElement.classList.add("completed");
     }
-    todoElement.prepend(todoElement);
+    todosElement.prepend(todoElement);
   });
-}
+};
 
 const handleCreateTodo = (todos, text) => {
   const todo = createTodo(todos, text);
@@ -38,31 +38,33 @@ const handleCreateTodo = (todos, text) => {
   todosElement.prepend(todoElement);
 };
 
-export const initTodoHandlers = (todos) => {
+export const initTodoHandlers = todos => {
+  formElement.addEventListener("submit", event => {
+    event.preventDefault();
 
-    formElement.addEventListener("submit", event => {
-  event.preventDefault();
+    const text = inputElement.value.trim();
+    if (!text) return;
 
-  const text = inputElement.value.trim();
-  if (!text) return;
+    handleCreateTodo(todos, text);
+    inputElement.value = "";
+  });
 
-  handleCreateTodo(todos, text);
-  inputElement.value = "";
-});
+  todosElement.addEventListener("click", ({ target }) => {
+    const todo = target.closest(".todo");
+    if (!todo) return;
 
-todosElement.addEventListener("click", ({ target }) => {
-  const todo = target.closest(".todo");
-  if (!todo) return;
-  if (target.matches(".button-complete")) {
-    completeTodoById(todos, Number(todo.dataset.id));
-    setTodosToLocalStorage(todos);
-    todo.classList.toggle("completed");
-  }
-  if (target.matches(".button-delete")) {
-    completeTodoById(todos, Number(todo.dataset.id));
-    setTodosToLocalStorage(todos);
-    todo.remove();
-  }
-});
+    const todoId = Number(todo.dataset.id);
 
-}
+    if (target.matches(".button-complete")) {
+      completeTodoById(todos, todoId);
+      setTodosToLocalStorage(todos);
+      todo.classList.toggle("completed");
+    }
+
+    if (target.matches(".button-delete")) {
+      deleteTodoById(todos, todoId);
+      setTodosToLocalStorage(todos);
+      todo.remove();
+    }
+  });
+};
