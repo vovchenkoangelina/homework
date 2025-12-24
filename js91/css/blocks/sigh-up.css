@@ -1,0 +1,57 @@
+.sigh-up {
+    padding-top: 42px;
+    padding-bottom: 19px;
+}
+
+.sigh-up__inner{
+    margin-inline: 180px;
+  background: var( --bg-accent-color);        
+  border-radius: 16px;         
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.sigh-up__img{
+  display: block;
+  margin: 28px auto 22px;
+  max-width: 100%;
+  height: auto;
+}
+
+.sigh-up__control{
+  width: min(520px, 100%);
+  height: 56px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: stretch;
+
+  border: 1px solid #000;
+  border-radius: 999px;
+  overflow: hidden;            
+  background: transparent;
+}
+
+.sigh-up__input{
+  flex: 1 1 auto;
+  border: 0;
+  outline: none;
+  background: transparent;
+
+  padding: 0 22px;
+  font: inherit;
+}
+
+.sigh-up__input::placeholder{
+  opacity: 0.7;
+}
+
+.sigh-up__submit{
+  flex: 0 0 150px;           
+  border: 0;
+  background: #000;
+  color: #fff;
+
+  font: inherit;
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+:root {
+  /* шрифты */
+  --font-family: "Inter_Regular", sans-serif;
+  --second-family: "ReadexPro-Regular", sans-serif;
+
+  /* цвета */
+  --main-color: #000;
+  --secondary-color: #4b4b4b;
+  --bg-accent-color: #dce5e2;
+  --bg-color: #f8f9fa;
+  --border-color: #c5c5c5;
+
+  /*тени и подсветки*/
+  --shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.25);
+
+  /* контейнер */
+  --container-width: 1440px;
+  --container-padding: 73px;
+
+  /* переходы */
+  --transition-time: 0.4s;
+    }

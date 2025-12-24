@@ -1,0 +1,87 @@
+
+.header {
+
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 30px;
+}
+
+.header__menu {
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.menu__list {
+    display: flex;
+    gap: 33px;
+}
+
+.menu__item {
+}
+.menu__link--drop-down::after {
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    margin-bottom: 1px;
+    flex-shrink: 0;
+    width: 12px;
+    height: 8px;
+    background-image: url(../../icons/arrow-icon.svg);
+    transform: rotate(-90deg);
+}
+
+.menu__item--has-dropdown {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  
+  padding-inline: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
+.dropdown__link {
+  display: block;
+  padding: 10px 0px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.menu__item--has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.menu__item--has-dropdown.is-open .menu__link--drop-down::after {
+    transform: rotate(0deg);
+}
+
+.header__actions {
+    display: flex;
+    gap: 13px;
+    padding: 8px 28px;
+}
+

@@ -1,0 +1,78 @@
+.categories { 
+    padding-top: 47px;
+    padding-bottom: 6px;
+}
+
+.categories__container { 
+
+}
+
+.categories__title { 
+    
+}
+
+.categories__subtitle { 
+
+}
+
+.categories__devices { 
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories__devises-left-half { 
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.categories__devises-right-half { 
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.categories__devise-card { 
+    box-shadow: var(--shadow);
+}
+
+.categories__devise-card--left {
+    width: 639px;
+    padding-inline: 42px;
+}
+
+.categories__devise-card--left:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories__devise-card--right {
+    width: 312px;
+    height: 792px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 42px;
+}
+
+.categories__devise-card-img { }
+
+.categories__devise-card-title { 
+    font-family: var(--font-family);
+font-size: 15px;
+line-height: 128%;
+}
+
+.categories__devise-card-subtitle { 
+    max-width: 250px;
+    display: inline-block;
+    font-family: var(--second-family);
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+}
+

@@ -1,0 +1,110 @@
+.page {
+  font-weight: 400;
+  color: var(--main-color);
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  min-width: 360px;
+}
+
+.page__body--no-scroll {
+  overflow-y: hidden;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding-inline: var(--container-padding);
+  margin-inline: auto;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+    color: var(--main-color);
+}
+
+.section-title {
+  margin-bottom: 9px;
+      font-family: var(--second-family);
+font-size: 42px;
+line-height: 125%;
+text-align: center;
+}
+
+.section-subtitle {
+    max-width: 630px;
+    margin-inline: auto;
+    font-family: var(--second-family);
+font-size: 14px;
+line-height: 120%;
+text-align: center;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;      
+  padding-inline: 53px;
+  flex: 0 0 auto;        
+  width: fit-content; 
+
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: capitalize;
+
+  border: 1px solid #000;
+  border-radius: 999px;
+
+  white-space: nowrap;
+}
+
+a{
+  display: inline-block;
+  transition: transform 0.4s, letter-spacing 0.4s;
+}
+
+button {
+  display: inline-block;
+  transition: transform 0.4s;
+}
+
+a:hover, button:hover {
+  transform: scale(1.1);
+}
+
+a:hover {
+  letter-spacing: 1px;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  font-size: 30px;
+  background: var(--bg-accent-color);
+
+  padding: 10px;
+  border-radius: 15px;
+
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+}
+
+.scroll-top--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
